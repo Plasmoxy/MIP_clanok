@@ -1,11 +1,10 @@
 % Metódy inžinierskej práce
 
-% twoside ??
-\documentclass[10pt,slovak,a4paper]{IEEEtran}
+\documentclass[10pt,slovak,a4paper]{article}
 
 \usepackage[slovak]{babel}
 %\usepackage[T1]{fontenc}
-%\usepackage[T1]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{url} % príkaz \url na formátovanie URL
@@ -26,8 +25,6 @@
 
 \date{\small 30. september 2015} % upravte
 
-
-
 \begin{document}
 
 \maketitle
@@ -37,15 +34,16 @@
 \end{abstract}
 
 
-
 \section{Úvod}
 
-Motivujte ee čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
+Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
 
 Uveďte explicitne štruktúru článku. Tu je nejaký príklad.
 Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
 Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
 Záverečné poznámky prináša časť~\ref{zaver}.
+
+
 
 \section{Nejaká časť} \label{nejaka}
 
@@ -102,27 +100,22 @@ Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom
 
 \section{Dôležitá časť} \label{dolezita}
 
-\begin{itemize}
-\item kys
-\item yes
-\end{itemize}
+
 
 
 \section{Ešte dôležitejšia časť} \label{dolezitejsia}
 
 
+
+
 \section{Záver} \label{zaver} % prípadne iný variant názvu
-Na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, na záver by som chcel povedať že, yes.
 
-Kodomo no monogatari desu.
 
-\section{Equations test} \label{equations_test}
-$$ \bar{a} b = c $$
-$$ \lim_{x\to-\infty} f(x) = \lim_{x\to-\infty} x^2 + 2x $$
+
+%\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
 
 % týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
-
 \bibliography{literatura}
 \bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
 \end{document}
