@@ -12,6 +12,8 @@
 \usepackage{multicol}
 \usepackage[unicode]{hyperref}
 \usepackage{csquotes}
+\usepackage{caption}
+\usepackage{array}
 
 \pagestyle{headings}
 \title{Časový manažment a organizácia informácií\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2020/21, vedenie: Zuzana Špitálová}}
@@ -20,7 +22,7 @@
 	{\small Fakulta informatiky a informačných technológií}\\
 	{\small \texttt{xpetriks1@stuba.sk}}
 	}
-\date{\small 3. november 2020}
+\date{\small 8. december 2020}
 
 \begin{document}
 \maketitle
@@ -65,12 +67,12 @@ Svojím článkom by som sa chcel zamerať na problematiku časového manažment
 	
 	Je dôležité si uvedomiť, že tieto rôzne pojmy sa venujú spoločnému problému, a preto sú často využívané spolu. Tento fakt si môžeme všimnúť napríklad pri skúmaní funkcionality nástrojov spojených s touto problematikou, kde v jednom nástroji často nachádzame funkcie pre správu času, ale aj organizáciu úloh a informácií spojených s týmito úlohami.
 	
-	\par
+	\paragraph{}
 	\begin{figure*}[tbh]
 		\centering
 		\includegraphics[width=0.9\textwidth]{problematika.png}
 	\caption{Pojmy časového manažmentu}
-	\label{f:rozhod}
+	\label{f:pojmy}
 	\end{figure*}
 	
 	\subsection{Časový manažment} \label{casovy_manazment}
@@ -109,6 +111,8 @@ Svojím článkom by som sa chcel zamerať na problematiku časového manažment
 		Môžeme ju definovať ako prerušenie súvislej pracovnej aktivity. Rôzne štúdie spomínajú, ako ľudia pracujúci s informáciami často dedikujú malé množstvá času určitým aktivitám a často menia činnosti. Takéto správanie bolo zaznamenané napr. pri manažéroch, finančných analytikoch a softvérových vývojároch\cite{NoTask}.
 		
 		Štúdia\cite{NoTask} uvádza, že fragmentácia p. má dva hlavné aspekty - dĺžka času využitá na súvislú aktivitu a prerušenia danej aktivity. Práca dosahuje tým väčšiu fragmentáciu, čím menej času človek využije na plnenie úlohy a čím viac je človek vyrušovaný. Je síce pravda, že striedanie úloh môže mať určité výhody - môže nám to pomôcť oddýchnuť si a získať nové nápady. Na druhej strane, striedanie aktivít môže zhoršiť koncentráciu na jednotlivé úlohy a môže znížiť efektivitu a množstvo vykonanej práce\cite{NoTask}.
+		
+		Fransilla zároveň uvádza, že ľudia pracujúci s informáciami pociťujú fragmentáciu práce najčastejšie vo forme uponáhľanosti a zábudlivosti \cite{Franssila}.
 		
 	\subsection{Vyrušenia}
 	% typy, mozu byt benefitial, inkubacia problemu
@@ -161,17 +165,77 @@ Svojím článkom by som sa chcel zamerať na problematiku časového manažment
 	
 		Štúdia \cite{Haraty} uvádza, že používateľov nástrojov by sme mohli rozdeliť do určitých kategórií v závislosti na tom, aké nástroje (a teda aké funkcie) používajú:
 		
+		\par
 		\begin{itemize}
 			\item \textbf{Adopters} - využívajú dedikovaný nástroj,
 			\item \textbf{DIYers} (\enquote{do-it-yourself-ers}) - využívajú všeobecné nástroje (MS word, diár), vytvárajú si vlastný systém (čoho dôvodom môžu byť nepostačujúce existujúce nástroje alebo napr. potreba personalizácie),
 			\item \textbf{Make-doers} - minimálne využitie nástrojov (email, pero a papier, MS Word), preferujú predvolené nastavenia, využívajú minimálne funkcie časového manažmentu \cite{Haraty}.
 		\end{itemize}
-
+		
+		Na základe tohto rozdelenia bol uskutočnený touto štúdiou prieskum medzi 19 účastníkmi ohľadom nástroja, ktorý využívajú \cite{Haraty}:
+		
+		\par
+		\begin{table}[tbh]
+			
+			\begin{center}
+				\begin{tabular}{ | p{0.12\linewidth} | p{0.60\linewidth} | p{0.20\linewidth} | }
+					\hline
+						\textbf{č. účastníka} & \textbf{Nástroj} & \textbf{Kategória} \\ \hline
+						1 & Papierový diár & DYIer \\ \hline
+						2 & Kúsky papiera, Notepad, email & DYIer \\ \hline
+						3 & Papier, email, alarm & DYIer \\ \hline
+						4 & Word dokument, Google Calendar, poznámkový zošit, alarm & DYIer \\ \hline
+						5 & OneNote, Outlook & DYIer \\ \hline
+						6 & Papier & DYIer \\ \hline
+						7 & Word dokument, Google Calendar & DYIer \\ \hline
+						8 & Microsoft Excel, Word, Google Calendar/ Tasks, iPhone calendar & DYIer \\ \hline
+						9 & Papier, kalendáry & DYIer \\ \hline
+						10 & Wiki, poznámkový zošit, sticky notes & DYIer \\ \hline
+						11 & Word dokument, papierový zošit & DYIer \\ \hline
+						12 & AbstractSpoon, Email(Gmail), Google Calendar & Adopter \\ \hline
+						13 & Things, Google Calendar & Adopter \\ \hline
+						14 & Google Tasks, Email, Google Calendar, Whiteboard, wiki & Adopter \\ \hline
+						15 & OmniFocus, kolaboratívny email & Adopter \\ \hline
+						16 & papierový poznámkový blok, iPod calendar & Make-doer \\ \hline
+						17 & Email, Google Calendar & Make-doer \\ \hline
+						18 & Calendar (Google, iphone), poznámkový zošit & Make-doer \\ \hline
+						19 & Google Calendar, Firefox Tabs, textové súbory & Make-doer \\ \hline
+				\end{tabular}
+				\caption{Nástroje využívané účastníkmi prieskumu \cite{Haraty}}
+			\end{center}
+		\end{table}
+		
+		\paragraph{}
+		\begin{figure*}[tbh]
+			\centering
+			\includegraphics[width=0.6\textwidth]{grafkateg.png}
+		\caption{Pomer kategórií používateľov z prieskumu \cite{Haraty}}
+		\label{f:kategraf}
+		\end{figure*}
+		
+		Podľa diagramu (Obr. \ref{f:kategraf}) si môžeme všimnúť, že najpočetnejšou kategóriou sú práve používatelia, ktorí si vytvárajú vlastný systém a preferujú personalizáciu. Tento fakt by mohol byť dôležitý pre budúci vývoj nástrojov časového manažmentu - nástroje by mali byť ľahko prispôsobiteľné používateľom.
+		
 \section{Vplyv a dôležitosť časového manažmentu}
-% Fransilla Results
-% Psychology colleration to students
-% 
+
+		Časový manažment má veľký vplyv na prakticky každú pracovnú sféru, či už vo firmách, alebo aj v edukačnom prostredí. Hlavnými výhodami dobrého časového manažmentu môže byť práve menej stresu, lepšia efektivita práce (a teda viac voľného času) a lepšie výsledky.
+		
 	\subsection{Vplyv na psychiku a stres}
+	
+		Vplyvu časového manažmentu na človeka a jeho psychiku sa venujú rôzne psychologické štúdie \cite{Macan}.
+	
+		Je bežné, že študent vysokej školy vníma svoje štúdium ako veľmi stresujúce.Fransilla zároveň uvádza, že ľudia pracujúci s informáciami pociťujú fragmentáciu práce najčastejšie vo forme uponáhľanosti a zábudlivosti \cite{Franssila}.
+		
+		Macan \cite{Macan} vo svojej štúdii uvádza, že existujú rôzne faktory, ktorými môžeme hodnotiť efekt časového manažmentu na človeka. Jedným  z týchto faktorov je napríklad schopnosť vnímať svoju kontrolu nad vlastným časom. Študenti v prieskume \cite{Macan}, ktorí mali túto schopnosť preukázali značne lepšie výsledky, lepšiu celkovú spokojnosť z práce a života, menej prepracovanosti a menej pocitov napätia \cite{Macan}.
+		
+	\subsection{Spojitosť s inými odbormi}
+		
+		\paragraph{Spoločenské súvislosti.}
+		
+		\paragraph{Historické súvislosti.}
+		\paragraph{Technológia a ľudia.}
+		\paragraph{Udržateľnosť a etika.}
+		
+		
 \section{Záver}
 
 \bibliography{literatura}
